@@ -25,3 +25,5 @@ $scripts = "$(split-path $profile)\scripts"
 $desktop = $(resolve-path "$Env:userprofile\Desktop")
 
 $env:path += ";$scripts"
+
+$env:term = "msys"

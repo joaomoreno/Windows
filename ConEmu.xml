@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2014-10-01 09:12:57" build="140923">
+		<key name=".Vanilla" modified="2014-10-16 10:08:53" build="140923">
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
@@ -86,10 +86,16 @@
 			<value name="StoreTaskbarCommands" type="hex" data="00"/>
 			<value name="SaveCmdHistory" type="hex" data="01"/>
 			<value name="CmdLineHistory" type="multi">
+				<line data="{PowerShell}"/>
+				<line data="{LR WorkspaceService}"/>
+				<line data="{VSDev (Admin)}"/>
+				<line data="{LR WorkbenchService}"/>
+				<line data="{Simpleserver Secure}"/>
 				<line data="{Simpleserver}"/>
 				<line data="{Monaco Dev}"/>
 				<line data="{Monaco Selfhost}"/>
-				<line data="{PowerShell}"/>
+				<line data="{cmd}"/>
+				<line data="{cmd (Admin)}"/>
 				<line data="{PowerShell (Admin)}"/>
 			</value>
 			<value name="SingleInstance" type="hex" data="01"/>
@@ -106,8 +112,8 @@
 			<value name="Multi.UseNumbers" type="hex" data="01"/>
 			<value name="Multi.UseWinTab" type="hex" data="00"/>
 			<value name="Multi.AutoCreate" type="hex" data="00"/>
-			<value name="Multi.LeaveOnClose" type="hex" data="00"/>
-			<value name="Multi.HideOnClose" type="hex" data="00"/>
+			<value name="Multi.LeaveOnClose" type="hex" data="01"/>
+			<value name="Multi.HideOnClose" type="hex" data="01"/>
 			<value name="Multi.MinByEsc" type="hex" data="02"/>
 			<value name="MapShiftEscToEsc" type="hex" data="01"/>
 			<value name="Multi.Iterate" type="hex" data="01"/>
@@ -142,11 +148,11 @@
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd Width" type="dword" data="0000009f"/>
-			<value name="ConWnd Height" type="dword" data="0000002d"/>
+			<value name="ConWnd Width" type="dword" data="0000008f"/>
+			<value name="ConWnd Height" type="dword" data="00000026"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="dword" data="000000a8"/>
-			<value name="ConWnd Y" type="dword" data="00000195"/>
+			<value name="ConWnd X" type="dword" data="0000050a"/>
+			<value name="ConWnd Y" type="dword" data="00000174"/>
 			<value name="16bit Height" type="dword" data="00000000"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
@@ -542,25 +548,41 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-			<key name="Tasks" modified="2014-10-01 09:09:59" build="140923">
-				<value name="Count" type="dword" data="00000009"/>
-				<key name="Task1" modified="2014-10-01 09:09:59" build="140923">
+			<key name="Tasks" modified="2014-10-16 10:08:53" build="140923">
+				<value name="Count" type="dword" data="0000000c"/>
+				<key name="Task1" modified="2014-10-16 10:08:53" build="140923">
 					<value name="Name" type="string" data="{PowerShell}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="powershell.exe -new_console:d:C:\Users\jomo"/>
+					<value name="Cmd1" type="string" data="powershell.exe -new_console:d:%HOMEDRIVE%%HOMEPATH%"/>
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task2" modified="2014-10-01 09:09:59" build="140923">
+				<key name="Task2" modified="2014-10-16 10:08:53" build="140923">
 					<value name="Name" type="string" data="{PowerShell (Admin)}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="powershell.exe -new_console:a:d:C:\Users\jomo"/>
+					<value name="Cmd1" type="string" data="powershell.exe -new_console:a:d:%HOMEDRIVE%%HOMEPATH%"/>
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task3" modified="2014-10-01 09:09:59" build="140923">
+				<key name="Task3" modified="2014-10-16 10:08:53" build="140923">
+					<value name="Name" type="string" data="{LR WorkspaceService}"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=""/>
+					<value name="Cmd1" type="string" data="C:\LR\VSCWorkspaceService\LightRail.exe -new_console:a"/>
+					<value name="Active" type="dword" data="00000000"/>
+					<value name="Count" type="dword" data="00000001"/>
+				</key>
+				<key name="Task4" modified="2014-10-16 10:08:53" build="140923">
+					<value name="Name" type="string" data="{LR WorkbenchService}"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=""/>
+					<value name="Cmd1" type="string" data="C:\LR\VSCWorkbenchService\LightRail.exe -new_console:a"/>
+					<value name="Active" type="dword" data="00000000"/>
+					<value name="Count" type="dword" data="00000001"/>
+				</key>
+				<key name="Task5" modified="2014-10-16 10:08:53" build="140923">
 					<value name="Name" type="string" data="{Monaco Selfhost}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -568,7 +590,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task4" modified="2014-10-01 09:09:59" build="140923">
+				<key name="Task6" modified="2014-10-16 10:08:53" build="140923">
 					<value name="Name" type="string" data="{Monaco Dev}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -576,7 +598,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task5" modified="2014-10-01 09:09:59" build="140923">
+				<key name="Task7" modified="2014-10-16 10:08:53" build="140923">
 					<value name="Name" type="string" data="{Simpleserver}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -584,7 +606,15 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task6" modified="2014-10-01 09:09:59" build="140923">
+				<key name="Task8" modified="2014-10-16 10:08:53" build="140923">
+					<value name="Name" type="string" data="{Simpleserver Secure}"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=""/>
+					<value name="Cmd1" type="string" data="%HOMEDRIVE%%HOMEPATH%\Work\Monaco\tools\simpleserver.bat -s"/>
+					<value name="Active" type="dword" data="00000000"/>
+					<value name="Count" type="dword" data="00000001"/>
+				</key>
+				<key name="Task9" modified="2014-10-16 10:08:53" build="140923">
 					<value name="Name" type="string" data="{VSDev}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -592,7 +622,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task7" modified="2014-10-01 09:09:59" build="140923">
+				<key name="Task10" modified="2014-10-16 10:08:53" build="140923">
 					<value name="Name" type="string" data="{VSDev (Admin)}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -600,7 +630,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task8" modified="2014-10-01 09:09:59" build="140923">
+				<key name="Task11" modified="2014-10-16 10:08:53" build="140923">
 					<value name="Name" type="string" data="{cmd}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -608,7 +638,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task9" modified="2014-10-01 09:09:59" build="140923">
+				<key name="Task12" modified="2014-10-16 10:08:53" build="140923">
 					<value name="Name" type="string" data="{cmd (Admin)}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -617,10 +647,10 @@
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
 			</key>
-			<key name="Apps" modified="2014-10-01 09:09:59" build="140923">
+			<key name="Apps" modified="2014-10-16 10:08:53" build="140923">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
-			<key name="Colors" modified="2014-10-01 09:09:59" build="140923">
+			<key name="Colors" modified="2014-10-16 10:08:53" build="140923">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
 		</key>
