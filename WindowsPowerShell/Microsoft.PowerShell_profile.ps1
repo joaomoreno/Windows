@@ -1,8 +1,14 @@
+Push-Location (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent)
+Import-Module .\Modules\posh-git\posh-git
+Pop-Location
+
 function prompt
 {
-    Write-Host ("$pwd ") -nonewline -foregroundcolor Cyan
-    Write-Host ("$") -nonewline -foregroundcolor Green
-    return " "
+  Write-Host ("$pwd") -nonewline -foregroundcolor Cyan
+  Write-VcsStatus
+  Write-Host ""
+  Write-Host ("$") -nonewline -foregroundcolor Green
+  return " "
 }
 
 function open { & explorer.exe $args }
